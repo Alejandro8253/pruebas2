@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Gráficas</title>
+    <link rel="stylesheet" href="../CSS/styles2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script>
+        const porcentajesRenovables = {
+            Argentina: 37,
+            Colombia: 70,
+            Venezuela: 64,
+            Ecuador: 90,
+            Peru: 59,
+            Brasil: 87,
+            Chile: 70,
+            Mexico: 25
+        };
+
+        function mostrarPanel() {
+            let pais = document.getElementById("pais").value;
+            let porcentajeRenovable = porcentajesRenovables[pais] || 0;
+
+            switch (pais) {
+                case "Argentina":
+                    document.getElementById("panel-argentina").style.display = "block";
+                    document.getElementById("panel-colombia").style.display = "none";
+                    document.getElementById("panel-venezuela").style.display = "none";
+                    document.getElementById("panel-ecuador").style.display = "none";
+                    document.getElementById("panel-peru").style.display = "none";
+                    document.getElementById("panel-brasil").style.display = "none";
+                    document.getElementById("panel-chile").style.display = "none";
+                    document.getElementById("panel-mexico").style.display = "none";
+                    document.getElementById("calculadora-container").style.display = "block";
+                    document.getElementById("resultado").innerText = "";
+
+                    break;
+                case "Colombia":
+                    document.getElementById("panel-argentina").style.display = "none";
+                    document.getElementById("panel-colombia").style.display = "block";
+                    document.getElementById("panel-venezuela").style.display = "none";
+                    document.getElementById("panel-ecuador").style.display = "none";
+                    document.getElementById("panel-peru").style.display = "none";
+                    document.getElementById("panel-brasil").style.display = "none";
+                    document.getElementById("panel-chile").style.display = "none";
+                    document.getElementById("panel-mexico").style.display = "none";
+                    document.getElementById("calculadora-container").style.display = "block";
+                    document.getElementById("resultado").innerText = "";
+
+                    break;
+                case "Venezuela":
+                    document.getElementById("panel-argentina").style.display = "none";
+                    document.getElementById("panel-colombia").style.display = "none";
+                    document.getElementById("panel-venezuela").style.display = "block";
+                    document.getElementById("panel-ecuador").style.display = "none";
+                    document.getElementById("panel-peru").style.display = "none";
+                    document.getElementById("panel-brasil").style.display = "none";
+                    document.getElementById("panel-chile").style.display = "none";
+                    document.getElementById("panel-mexico").style.display = "none";
+                    document.getElementById("calculadora-container").style.display = "block";
+                    document.getElementById("resultado").innerText = "";
+
+                    break;
+                case "Ecuador":
+                    document.getElementById("panel-argentina").style.display = "none";
+                    document.getElementById("panel-colombia").style.display = "none";
+                    document.getElementById("panel-venezuela").style.display = "none";
+                    document.getElementById("panel-ecuador").style.display = "block";
+                    document.getElementById("panel-peru").style.display = "none";
+                    document.getElementById("panel-brasil").style.display = "none";
+                    document.getElementById("panel-chile").style.display = "none";
+                    document.getElementById("panel-mexico").style.display = "none";
+                    document.getElementById("calculadora-container").style.display = "block";
+                    document.getElementById("resultado").innerText = "";
+
+                    break;
+                case "Peru":
+                    document.getElementById("panel-argentina").style.display = "none";
+                    document.getElementById("panel-colombia").style.display = "none";
+                    document.getElementById("panel-venezuela").style.display = "none";
+                    document.getElementById("panel-ecuador").style.display = "none";
+                    document.getElementById("panel-peru").style.display = "block";
+                    document.getElementById("panel-brasil").style.display = "none";
+                    document.getElementById("panel-chile").style.display = "none";
+                    document.getElementById("calculadora-container").style.display = "block";
+                    document.getElementById("resultado").innerText = "";
+
+                    break;
+                case "Brasil":
+                    document.getElementById("panel-argentina").style.display = "none";
+                    document.getElementById("panel-colombia").style.display = "none";
+                    document.getElementById("panel-venezuela").style.display = "none";
+                    document.getElementById("panel-ecuador").style.display = "none";
+                    document.getElementById("panel-peru").style.display = "none";
+                    document.getElementById("panel-brasil").style.display = "block";
+                    document.getElementById("panel-chile").style.display = "none";
+                    document.getElementById("panel-mexico").style.display = "none";
+                    document.getElementById("calculadora-container").style.display = "block";
+                    document.getElementById("resultado").innerText = "";
+
+                    break;
+                case "Chile":
+                    document.getElementById("panel-argentina").style.display = "none";
+                    document.getElementById("panel-colombia").style.display = "none";
+                    document.getElementById("panel-venezuela").style.display = "none";
+                    document.getElementById("panel-ecuador").style.display = "none";
+                    document.getElementById("panel-peru").style.display = "none";
+                    document.getElementById("panel-brasil").style.display = "none";
+                    document.getElementById("panel-chile").style.display = "block";
+                    document.getElementById("panel-mexico").style.display = "none";
+                    document.getElementById("calculadora-container").style.display = "block";
+                    document.getElementById("resultado").innerText = "";
+
+                    break;
+                case "Mexico":
+                    document.getElementById("panel-argentina").style.display = "none";
+                    document.getElementById("panel-colombia").style.display = "none";
+                    document.getElementById("panel-venezuela").style.display = "none";
+                    document.getElementById("panel-ecuador").style.display = "none";
+                    document.getElementById("panel-peru").style.display = "none";
+                    document.getElementById("panel-brasil").style.display = "none";
+                    document.getElementById("panel-chile").style.display = "none";
+                    document.getElementById("panel-mexico").style.display = "block";
+                    document.getElementById("calculadora-container").style.display = "block";
+                    document.getElementById("resultado").innerText = "";
+
+                    break;
+                default:
+                    document.getElementById("panel-argentina").style.display = "none";
+                    document.getElementById("panel-colombia").style.display = "none";
+                    document.getElementById("panel-venezuela").style.display = "none";
+                    document.getElementById("panel-ecuador").style.display = "none";
+                    document.getElementById("panel-peru").style.display = "none";
+                    document.getElementById("panel-brasil").style.display = "none";
+                    document.getElementById("panel-chile").style.display = "none";
+                    document.getElementById("panel-mexico").style.display = "none";
+                    document.getElementById("calculadora-container").style.display = "block";
+                    document.getElementById("resultado").innerText = "";
+
+            }
+            document.getElementById("videoContainer").style.display = "none";
+        }
+        function calcularRenovable() {
+            const consumo = parseFloat(document.getElementById('consumo').value);
+            const paisSeleccionado = document.getElementById('pais').value;
+            const porcentajeRenovable = porcentajesRenovables[paisSeleccionado] || 0;
+
+            if (isNaN(consumo) || consumo <= 0) {
+                document.getElementById('resultado').innerText = "Ingresa un valor válido.";
+                return;
+            }
+
+            const renovable = consumo * (porcentajeRenovable / 100);
+            document.getElementById('resultado').innerText =
+                `Aproximadamente ${renovable.toFixed(2)} kWh de tu consumo podrían venir de fuentes renovables (${porcentajeRenovable}%).`;
+        }
+
+
+
+        function mostrarImagenCompleta(src, alt) {
+            const modal = document.getElementById('modal-imagen');
+            const img = document.getElementById('modal-img');
+            img.src = src;
+            img.alt = alt || '';
+            modal.style.display = 'flex';
+        }
+
+        function cerrarImagenCompleta() {
+            document.getElementById('modal-imagen').style.display = 'none';
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') cerrarImagenCompleta();
+        });
+
+        const selector = document.getElementById("pais"); // Reemplazar con el ID real
+        const videoContainer = document.getElementById("gif-contenedor");
+
+        selector.addEventListener("change", function () {
+            if (this.value === "") {
+                videoContainer.style.display = "flex";
+                console.log("El video se está mostrando.");
+            } else {
+                videoContainer.style.display = "none";
+                console.log("El video se ha ocultado.");
+            }
+        });
+
+    </script>
+</head>
+
+<body>
+    <div id="header">
+        <header>
+            <a href="../index.html" class="logo"><strong>⚡Energetik 404 </strong> </a>
+            <ul class="icons">
+                <li><a class="menu-link" href="../index.html"><span class="label">Inicio</span></a></li>
+                <li><a class="menu-link" href="../paginas/grafica.html"><span class="label">Datos por país</span></a></li>
+                <li><a class="menu-link" href="../paginas/energias.html"><span class="label">Energías</span></a></li>
+                <li><a class="menu-link" href="../paginas/acercad.html"><span class="label">Acerca de</span></a></li>
+
+            </ul>
+        </header>
+        </ul>
+        </header>
+    </div>
+
+    <main>
+
+        <div class="container my-4">
+            <select class="form-select form-select-lg border-success shadow" id="pais" onchange="mostrarPanel()">
+                <option value="">Seleccione el País</option>
+                <option value="Argentina">Argentina</option>
+                <option value="Colombia">Colombia</option>
+                <option value="Venezuela">Venezuela</option>
+                <option value="Ecuador">Ecuador</option>
+                <option value="Peru">Peru</option>
+                <option value="Brasil">Brasil</option>
+                <option value="Chile">Chile</option>
+                <option value="Mexico">Mexico</option>
+            </select>
+
+            <div id="videoContainer" style="display: center;">
+                <video id="paisVideo" autoplay loop muted playsinline width="400">
+                    <source class="paisVideo" src="../images/gif-contenedor.mp4" type="video/mp4">
+                    Tu navegador no soporta videos HTML5.
+                </video>
+            </div>
+
+
+
+            <div id="calculadora-container" class="container my-5" style="display: none;">
+                <h2 class="mb-3">Calcula tu consumo de energía renovable</h2>
+                <label for="consumo" class="form-label">Consumo total (kWh):</label>
+                <input type="number" id="consumo" class="form-control mb-3" placeholder="Ej. 120">
+                <button class="btn btn-success" onclick="calcularRenovable()">Calcular</button>
+                <p id="resultado" class="mt-3 fw-bold"></p>
+            </div>
+
+        </div>
+
+
+
+
+
+
+        <div id="modal-imagen" onclick="cerrarImagenCompleta()">
+            <span class="cerrar-modal" onclick="cerrarImagenCompleta(); event.stopPropagation();">&times;</span>
+            <img id="modal-img" src="" alt="Imagen en grande" onclick="event.stopPropagation();" />
+        </div>
+
+        <section id="panel-argentina" style="display: none;">
+            <div>
+                <h1 class="pais">Datos Energeticos de Argentina<h1>
+                        <center><img src="../images/argento.jpeg" alt="foto de argentina"
+                                style="width: 10%; height: auto;"></center>
+            </div>
+            <div class="panel-flex">
+                <div class="chart-container">
+                    <h2>Gráfico de Pastel relacion paises</h2>
+                    <br>
+                    <img src="../images/Renergiaslimpiasargentina.png" alt="Grafico de Pastel"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+                <div class="chart-container">
+                    <h2>Gráfico de Barras apiladas por provenencia de electricidad </h2>
+                    <br>
+                    <img src="../images/Pargentina.png" alt="Gráfico de Barras apiladas"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+                <div class="chart-container">
+                    <h2>Grafico de Barras apiladas por Consumo</h2>
+                    <br>
+                    <img src="../images/Cargentina.png" alt="Gráfico de Barras"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+            </div>
+        </section>
+
+
+        <section id="panel-colombia" style="display:none;">
+            <div>
+                <h1 class="pais">Datos Energeticos de Colombia</h1>
+                <center><img src="../images/colombia.jpeg" alt="Foto de Colombia" style="width: 10%; height: auto;">
+                </center>
+            </div>
+            <div class="panel-flex">
+                <div class="chart-container">
+                    <h2>Gráfico de Pastel relacion paises</h2>
+                    <br>
+                    <img src="../images/Renergiaslimpiascolombia.png" alt="Grafico de Pastel"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+                <div class="chart-container">
+                    <h2>Gráfico de Barras apiladas por provenencia de electricidad</h2>
+                    <br>
+                    <img src="../images/Pcolombia.png" alt="Gráfica de Pastel"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+                <div class="chart-container">
+                    <h2>Grafico de Barras apiladas por Consumo</h2>
+                    <br>
+                    <img src="../images/Ccolombia.png" alt="Gráfica de Barras"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="panel-venezuela" style="display:none;">
+
+            <div>
+                <h1 class="pais">Datos Energeticos de Venezuela</h1>
+                <center><img src="../images/veneco.jpeg" alt="Foto de Venezuela" style="width: 18%; height: auto;">
+                </center>
+
+                <div class="panel-flex">
+                    <div class="chart-container">
+                        <h2>Gráfico de Pastel relacion paises</h2>
+                        <br>
+                        <img src="../images/Renergiaslimpiasvenezuela.png" alt="Grafico de Pastel"
+                            onclick="mostrarImagenCompleta(this.src, this.alt)" />
+
+                    </div>
+                    <div class="chart-container">
+                        <h2>Gráfica de Barras apiladas por provenencia de electricidad</h2>
+                        <br>
+                        <img src="../images/Pvenezuela.png" alt="Gráfica de Pastel"
+                            onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                    </div>
+                    <div class="chart-container">
+                        <h2>Gráfico de Barras apiladas por Consumo</h2>
+                        <br>
+                        <img src="../images/Cvenezuela.png" alt="Gráfica de Barras"
+                            onclick="mostrarImagenCompleta(this.src, this.alt)" />
+        </section>
+
+
+
+        <section id="panel-ecuador" style="display:none;">
+
+            <div>
+                <h1 class="pais">Datos Energeticos de Ecuador</h1>
+                <center><img src="../images/ecuador.jpeg" alt="Foto de Ecuador" style="width: 10%; height: auto;">
+                </center>
+
+                <div class="panel-flex">
+                    <div class="chart-container">
+                        <h2>Gráfico de Pastel relacion paises</h2>
+                        <br>
+                        <img src="../images/Renergiaslimpiasecuador.png" alt="Grafico de Pastel"
+                            onclick="mostrarImagenCompleta(this.src, this.alt)" />
+
+                    </div>
+                    <div class="chart-container">
+                        <h2>Gráfico de Barras apiladas por provenencia de electricidad</h2>
+                        <br>
+                        <img src="../images/Pecuador.png" alt="Gráfico de Barras apiladas"
+                            onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                    </div>
+                    <div class="chart-container">
+                        <h2>Gráfico de Barras apiladas por Consumo</h2>
+                        <br>
+                        <img src="../images/Cecuador.png" alt="Gráfica de Barras"
+                            onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                    </div>
+        </section>
+
+        <section id="panel-peru" style="display:none;">
+
+            <div>
+                <h1 class="pais">Datos Energeticos de Peru</h1>
+                <center><img src="../images/peru.jpeg" alt="Foto de Peru" style="width: 10%; height: 20%;">
+                </center>
+
+                <div class="panel-flex">
+                    <div class="chart-container">
+                        <h2>Gráfico de Pastel relacion paises</h2>
+                        <br>
+                        <img src="../images/Renergiaslimpiasperu.png" alt="Grafico de Pastel"
+                            onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                    </div>
+                    <div class="chart-container">
+                        <h2>Gráfico de Barras apiladas por provenencia de electricidad</h2>
+                        <br>
+                        <img src="../images/Pperu.png" alt="Gráfico de Barras apiladas"
+                            onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                    </div>
+                    <div class="chart-container">
+                        <h2>Gráfico de Barras apiladas por Consumo</h2>
+                        <br>
+                        <img src="../images/Cperu.png" alt="Gráfica de Barras"
+                            onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                    </div>
+                </div>
+
+        </section>
+
+        <section id="panel-brasil" style="display:none;">
+            <div>
+                <h1 class="pais">Datos Energeticos de Brasil</h1>
+                <center><img src="../images/brasil.jpeg" alt="Foto de Brasil" style="width: 20%; height: auto;">
+                </center>
+            </div>
+            <div class="panel-flex">
+                <div class="chart-container">
+                    <h2>Gráfica de Barras</h2>
+                    <br>
+                    <img src="../images/Renergiaslimpiasbrasil.png" alt="Grafico de Pastel"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+                <div class="chart-container">
+                    <h2>Gráfica de Pastel</h2>
+                    <br>
+                    <img src="../images/Pbrasil.png" alt="Gráfica de Barras apiladas"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+                <div class="chart-container">
+                    <h2>Otra Gráfica</h2>
+                    <br>
+                    <img src="../images/Cbrasil.png" alt="Gráfica de Barras"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+            </div>
+
+        </section>
+
+        <section id="panel-chile" style="display:none;">
+            <div>
+                <h1 class="pais">Datos Energeticos de Chile</h1>
+                <center><img src="../images/chile.jpeg" alt="Foto de Chile" style="width: 25%; height: auto">
+                </center>
+            </div>
+            <div class="panel-flex">
+                <div class="chart-container">
+                    <h2>Gráfica de Barras</h2>
+                    <br>
+                    <img src="../images/Renergiaslimpiaschile.png" alt="Grafico de Pastel"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+                <div class="chart-container">
+                    <h2>Gráfica de Pastel</h2>
+                    <br>
+                    <img src="../images/Pchile.png" alt="Gráfica de Barras apiladas"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+                <div class="chart-container">
+                    <h2>Otra Gráfica</h2>
+                    <br>
+                    <img src="../images/Cchile.png" alt="Gráfica de Barras"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+            </div>
+            </div>
+
+        </section>
+
+        <section id="panel-mexico" style="display:none;">
+            <div>
+                <h1 class="pais">Datos Energeticos de Mexico</h1>
+                <center><img src="../images/mex.jpeg" alt="Foto de Mexico" style="width: 20%; height: auto;">
+                </center>
+            </div>
+            <div class="panel-flex">
+                <div class="chart-container">
+                    <h2>Gráfico de Pastel relacion paises</h2>
+                    <br>
+                    <img src="../images/Renergiaslimpiasmexico.png" alt="Grafico de Pastel"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+                <div class="chart-container">
+                    <h2>Gráfico de Barras apiladas por provenencia de electricidad</h2>
+                    <br>
+                    <img src="../images/Pmexico.png" alt="Gráfico de Barras apiladas"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+                <div class="chart-container">
+                    <h2>Gráfico de Barras apiladas por Consumo</h2>
+                    <br>
+                    <img src="../images/Cmexico.png" alt="Gráfica de Barras"
+                        onclick="mostrarImagenCompleta(this.src, this.alt)" />
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 EnergetiK 404. Todos los derechos reservados.</p>
+        <p>Proyecto académico sobre transición energética en América Latina. Datos: Our World in Data (2000–2021).</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+
+ body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #f8f9fa;
+}
+
+
+.margen {
+  margin: 0;
+  padding: 0 2rem;
+}
+
+
+.header-principal {
+  background-color: #57CE5BB6;
+  color: rgb(0, 0, 0);
+  padding: 1rem ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  font-size: 1em;
+  
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 2rem;
+}
+nav a {
+  margin-left: 1rem;
+  color: green;
+  text-decoration: none;
+  font-weight: 500;
+}
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #3aca3f;
+}
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.botones-hero {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.boton {
+  background-color: #2E7D32;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+.boton.secundario {
+  background-color: #4CAF50;
+}
+.footer {
+  background-color: #57ce5bb6;
+  color: black;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 0.9em;
+  border-top: 4px solid #ffffff;
+  margin-top: 3em;
+}
+
+.footer p {
+  margin: 0.5em 0;
+}
+main {
+  padding: 2rem;
+}
+
+.circulo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.circulo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  text-align: center;
+  
+}
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+

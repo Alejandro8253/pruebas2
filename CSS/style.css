@@ -1,0 +1,256 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  background-color: #f8f9fa;
+}
+
+.header-principal {
+  background-color: #57CE5BB6;
+  color: rgb(0, 0, 0);
+  padding: 1rem ;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+  font-size: 1em;
+  
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+nav a {
+  margin-left: 1rem;
+  color: green;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #A5D6A7;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.botones-hero {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.boton {
+  background-color: #2E7D32;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.boton.secundario {
+  background-color: #4CAF50;
+}
+
+.footer {
+  background-color: #57ce5bb6;
+  color: black;
+  text-align: center;
+  padding: 2em 1em;
+  font-size: 0.9em;
+  border-top: 4px solid #ffffff;
+  margin-top: 3em;
+}
+
+.footer p {
+  margin: 0.5em 0;
+}
+
+
+main {
+  padding: 2rem;
+}
+
+.contexto {
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.contexto h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.contexto p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.mapa-paises {
+  background-color: #fff;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.mapa-paises h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+
+.mapa-paises p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.mapa-imagen {
+  max-width: 80%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.lista-paises {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.objetivos {
+  padding: 3rem 2rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.objetivos h2 {
+  font-size: 2rem;
+  color: #222;
+  margin-bottom: 2rem;
+}
+
+.cards-objetivos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.card-objetivo {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-width: 280px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.card-objetivo:hover {
+  transform: translateY(-5px);
+}
+
+.card-objetivo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #005b4f;
+}
+
+.card-objetivo p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.4;
+}
+
+.cta-final {
+  padding: 3rem 2rem;
+  background-color: #e7f5ff;
+  text-align: center;
+}
+
+.cta-final h2 {
+  font-size: 2rem;
+  color: #003b49;
+  margin-bottom: 1rem;
+}
+
+.cta-final p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: #444;
+}
+
+.botones-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.boton {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #2E7D32;
+  color: white;
+}
+
+.boton:hover {
+  background-color: #388e3c;
+}
+
+.boton.secundario {
+  background-color: #4CAF50;
+}
+
+.boton.secundario:hover {
+  background-color: #43a047;
+}
+
+.header-bg {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #4db6ac, #00796b);
+  color: #ffffff;
+  border-bottom: 4px solid #004d40;
+}
+
+.header-bg h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.header-bg p {
+  font-size: 1.2rem;
+  margin-top: 0;
+  color: #e0f2f1;
+}
